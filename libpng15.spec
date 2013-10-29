@@ -1,7 +1,7 @@
 #
 # Conditional build:
 %bcond_without	tests		# don't perform "make check"
-%bcond_without	default_libpng	# don't use this libpng as default system libpng
+%bcond_with	default_libpng	# don't use this libpng as default system libpng
 #
 Summary:	PNG library
 Summary(de.UTF-8):	PNG-Library
@@ -10,16 +10,16 @@ Summary(fr.UTF-8):	Librarie PNG
 Summary(pl.UTF-8):	Biblioteka PNG
 Summary(pt_BR.UTF-8):	Biblioteca PNG
 Summary(tr.UTF-8):	PNG kitaplığı
-Name:		libpng
+Name:		libpng15
 Version:	1.5.15
 Release:	1
 Epoch:		2
 License:	distributable
 Group:		Libraries
-Source0:	http://downloads.sourceforge.net/libpng/%{name}-%{version}.tar.xz
+Source0:	http://downloads.sourceforge.net/libpng/libpng-%{version}.tar.xz
 # Source0-md5:	e3122e7b5b5c36c034a4624c65f8a9d8
-Patch0:		%{name}-pngminus.patch
-Patch1:		http://downloads.sourceforge.net/libpng-apng/%{name}-1.5.15-apng.patch.gz
+Patch0:		libpng-pngminus.patch
+Patch1:		http://downloads.sourceforge.net/libpng-apng/libpng-1.5.15-apng.patch.gz
 # Patch1-md5:	3ae9ea7e4bd201f0b25e25cd6049b094
 URL:		http://www.libpng.org/pub/png/libpng.html
 BuildRequires:	rpmbuild(macros) >= 1.213
@@ -142,7 +142,7 @@ from PNM files.
 Narzędzia do konwersji plików PNG z lub do plików PNM.
 
 %prep
-%setup -q
+%setup -q -n libpng-%{version}
 %patch0 -p1
 %patch1 -p1
 
