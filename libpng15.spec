@@ -26,7 +26,7 @@ BuildRequires:	rpmbuild(macros) >= 1.213
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz >= 1:4.999.7
 BuildRequires:	zlib-devel
-Provides:	libpng(APNG) = 0.10
+Provides:	libpng15(APNG) = 0.10
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -76,7 +76,7 @@ Summary(tr.UTF-8):	başlık dosyaları ve statik kitaplıklar
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	zlib-devel
-Provides:	libpng(APNG)-devel = 0.10
+Provides:	libpng15(APNG)-devel = 0.10
 Conflicts:	libpng < 1.0.15
 
 %description devel
@@ -114,7 +114,7 @@ Summary(pl.UTF-8):	Biblioteka statyczna PNG
 Summary(pt_BR.UTF-8):	Bibliotecas estáticas para desenvolvimento com libpng
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
-Provides:	libpng(APNG)-static = 0.10
+Provides:	libpng15(APNG)-static = 0.10
 
 %description static
 Static PNG library.
