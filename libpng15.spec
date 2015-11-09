@@ -1,7 +1,7 @@
 #
 # Conditional build:
 %bcond_without	tests		# don't perform "make check"
-%bcond_with	default_libpng	# don't use this libpng as default system libpng
+%bcond_with	default_libpng	# use this libpng as default system libpng
 #
 Summary:	PNG library
 Summary(de.UTF-8):	PNG-Library
@@ -11,16 +11,16 @@ Summary(pl.UTF-8):	Biblioteka PNG
 Summary(pt_BR.UTF-8):	Biblioteca PNG
 Summary(tr.UTF-8):	PNG kitaplığı
 Name:		libpng15
-Version:	1.5.21
+Version:	1.5.23
 Release:	1
 Epoch:		2
 License:	distributable
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/libpng/libpng-%{version}.tar.xz
-# Source0-md5:	22eaa2e90352fcd153bed0cdecf542cb
+# Source0-md5:	725f9b98143450df03decf08b4bc42e3
 Patch0:		libpng-pngminus.patch
 Patch1:		http://downloads.sourceforge.net/libpng-apng/libpng-%{version}-apng.patch.gz
-# Patch1-md5:	c2db739bf068fe5ca66bbf184030b24d
+# Patch1-md5:	1495ec0c72efe83e70e8a354541b7fdf
 URL:		http://www.libpng.org/pub/png/libpng.html
 BuildRequires:	rpmbuild(macros) >= 1.213
 BuildRequires:	tar >= 1:1.22
