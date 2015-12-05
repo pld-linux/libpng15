@@ -11,16 +11,16 @@ Summary(pl.UTF-8):	Biblioteka PNG
 Summary(pt_BR.UTF-8):	Biblioteca PNG
 Summary(tr.UTF-8):	PNG kitaplığı
 Name:		libpng15
-Version:	1.5.23
+Version:	1.5.25
 Release:	1
 Epoch:		2
 License:	distributable
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/libpng/libpng-%{version}.tar.xz
-# Source0-md5:	725f9b98143450df03decf08b4bc42e3
+# Source0-md5:	61ec7118a231892ee6c5005c2cd1a8fb
 Patch0:		libpng-pngminus.patch
 Patch1:		http://downloads.sourceforge.net/libpng-apng/libpng-%{version}-apng.patch.gz
-# Patch1-md5:	1495ec0c72efe83e70e8a354541b7fdf
+# Patch1-md5:	b5679b69b1eac46a2978a03af9f3d77b
 URL:		http://www.libpng.org/pub/png/libpng.html
 BuildRequires:	rpmbuild(macros) >= 1.213
 BuildRequires:	tar >= 1:1.22
