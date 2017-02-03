@@ -11,16 +11,16 @@ Summary(pl.UTF-8):	Biblioteka PNG
 Summary(pt_BR.UTF-8):	Biblioteca PNG
 Summary(tr.UTF-8):	PNG kitaplığı
 Name:		libpng15
-Version:	1.5.27
+Version:	1.5.28
 Release:	1
 Epoch:		2
 License:	distributable
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/libpng/libpng-%{version}.tar.xz
-# Source0-md5:	0e53730830b3d98687d75c542977c6ea
+# Source0-md5:	847aa2a1b231c07466d7f4167537424a
 Patch0:		libpng-pngminus.patch
 Patch1:		http://downloads.sourceforge.net/libpng-apng/libpng-%{version}-apng.patch.gz
-# Patch1-md5:	5029d64dc69bf8713f8c071d8ce40396
+# Patch1-md5:	df34e8853d2387d05cedd19d5d6f56b0
 URL:		http://www.libpng.org/pub/png/libpng.html
 BuildRequires:	rpmbuild(macros) >= 1.213
 BuildRequires:	tar >= 1:1.22
@@ -153,6 +153,7 @@ Narzędzia do konwersji plików PNG z lub do plików PNM.
 %{__make} -C contrib/pngminus -f makefile.std \
 	LIBPATH=%{_libdir} \
 	CC="%{__cc}" \
+	LDFLAGS="%{rpmldflags}" \
 	OPT_FLAGS="%{rpmcppflags} %{rpmcflags}"
 
 %{?with_tests:%{__make} check}

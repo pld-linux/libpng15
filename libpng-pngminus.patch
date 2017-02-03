@@ -1,6 +1,6 @@
---- libpng-1.5.7/contrib/pngminus/makefile.std.orig	2011-12-15 16:45:32.000000000 +0100
-+++ libpng-1.5.7/contrib/pngminus/makefile.std	2011-12-18 16:24:38.099367091 +0100
-@@ -12,20 +12,20 @@
+--- libpng-1.5.28/contrib/pngminus/makefile.std.orig	2016-12-29 01:35:07.000000000 +0100
++++ libpng-1.5.28/contrib/pngminus/makefile.std	2017-02-03 23:08:53.032031871 +0100
+@@ -12,21 +12,21 @@
  #PNGLIB = -L$(PNGPATH)/lib -lpng15
  #PNGLIBS = $(PNGPATH)/lib/libpng15.a
  PNGINC = -I../..
@@ -19,15 +19,17 @@
 +ZLIB = -lz
 +ZLIBS = -lz
  
--CFLAGS=$(PNGINC) $(ZINC)
-+CFLAGS=$(OPT_FLAGS) $(PNGINC) $(ZINC)
- LDLIBS=$(PNGLIB) $(ZLIB)
+ CPPFLAGS=$(PNGINC) $(ZINC)
+-CFLAGS=
+-LDLIBS=$(PNGLIB) $(ZLIB)
 -LDLIBSS=$(PNGLIBS) $(ZLIBS)
-+LDLIBSS=$(LD_FLAGS) $(PNGLIBS) $(ZLIBS)
++CFLAGS=$(OPT_FLAGS)
++LDLIBS=$(LDFLAGS) $(PNGLIB) $(ZLIB)
++LDLIBSS=$(LDFLAGS) $(PNGLIBS) $(ZLIBS)
  C=.c
  O=.o
  L=.a
-@@ -33,8 +33,7 @@
+@@ -34,8 +34,7 @@
  
  # dependencies
  
@@ -36,4 +38,4 @@
 +all: png2pnm$(E) pnm2png$(E)
  
  png2pnm$(O): png2pnm$(C)
- 	$(CC) -c $(CFLAGS) png2pnm$(C)
+ 	$(CC) -c $(CPPFLAGS) $(CFLAGS) png2pnm$(C)
