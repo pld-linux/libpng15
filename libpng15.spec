@@ -143,8 +143,8 @@ Narzędzia do konwersji plików PNG z lub do plików PNM.
 
 %prep
 %setup -q -n libpng-%{version}
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 %build
 %configure
