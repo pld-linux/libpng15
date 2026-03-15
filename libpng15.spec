@@ -12,7 +12,7 @@ Summary(pt_BR.UTF-8):	Biblioteca PNG
 Summary(tr.UTF-8):	PNG kitaplığı
 Name:		libpng15
 Version:	1.5.30
-Release:	1
+Release:	2
 Epoch:		2
 License:	distributable
 Group:		Libraries
